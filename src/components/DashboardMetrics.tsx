@@ -1,5 +1,6 @@
 import { Card } from "./ui/card";
-import { ArrowUp, ArrowDown, Clock, CheckCircle2 } from "lucide-react";
+import { ArrowUp, ArrowDown, Clock, CheckCircle2, Users } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 export const DashboardMetrics = () => {
   const metrics = [

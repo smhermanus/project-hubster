@@ -1,4 +1,4 @@
-import { Home, KanbanSquare, Calendar, CheckSquare, Users, Folder } from "lucide-react";
+import { Home, KanbanSquare, Calendar, CheckSquare, Users, Folder, Settings } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
 import { useLocation, Link } from "react-router-dom";
