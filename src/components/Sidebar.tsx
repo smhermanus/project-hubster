@@ -1,7 +1,7 @@
 import { Home, KanbanSquare, Calendar, CheckSquare, Users, Folder, Settings } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
-import Link from "next/link";
+import { default as NextLink } from "next/link";
 import { usePathname } from "next/navigation";
 
 const navigation = [
@@ -25,7 +25,7 @@ export const Sidebar = () => {
         {navigation.map((item) => {
           const isActive = pathname === item.href;
           return (
-            <Link
+            <NextLink
               key={item.name}
               href={item.href}
               className={cn(
@@ -37,7 +37,7 @@ export const Sidebar = () => {
             >
               <item.icon className="h-5 w-5" />
               {item.name}
-            </Link>
+            </NextLink>
           );
         })}
       </nav>
