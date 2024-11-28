@@ -1,7 +1,8 @@
 import { Home, KanbanSquare, Calendar, CheckSquare, Users, Folder, Settings } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
-import { useLocation, Link } from "react-router-dom";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const navigation = [
   { name: "Dashboard", href: "/", icon: Home },
@@ -13,7 +14,7 @@ const navigation = [
 ];
 
 export const Sidebar = () => {
-  const location = useLocation();
+  const pathname = usePathname();
 
   return (
     <div className="flex flex-col gap-y-4 h-[calc(100vh-4rem)] w-64 border-r bg-white/80 backdrop-blur-sm p-4">
@@ -22,11 +23,11 @@ export const Sidebar = () => {
       </div>
       <nav className="flex-1 space-y-1">
         {navigation.map((item) => {
-          const isActive = location.pathname === item.href;
+          const isActive = pathname === item.href;
           return (
             <Link
               key={item.name}
-              to={item.href}
+              href={item.href}
               className={cn(
                 "flex items-center gap-x-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors",
                 isActive
