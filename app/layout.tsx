@@ -3,6 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Header } from "@/components/Header";
 import { Sidebar } from "@/components/Sidebar";
+import "@/styles/globals.css";
 
 export const metadata = {
   title: 'Project Management Dashboard',
